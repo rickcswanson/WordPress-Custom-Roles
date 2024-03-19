@@ -8,7 +8,7 @@ Author: Rick Swanson
 
 function customize_roles( $roles ) {
     // Hide roles
-    $roles_to_hide = array( 'contributor', 'content_editor', 'author'); // Add 'Pending' if you want to hide it
+    $roles_to_hide = array( 'contributor', 'author'); // Add 'Pending' if you want to hide it
 
     foreach ( $roles_to_hide as $role ) {
         if ( isset( $roles[ $role ] ) ) {
