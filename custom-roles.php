@@ -7,8 +7,8 @@ Author: Rick Swanson
 */
 
 function customize_roles( $roles ) {
-    // Hide roles
-    $roles_to_hide = array( 'contributor', 'author'); // Add 'Pending' if you want to hide it
+    // Add roles within the array to hide
+    $roles_to_hide = array( 'contributor', 'author'); // For example, add 'editor' if you want to hide that specific role
 
     foreach ( $roles_to_hide as $role ) {
         if ( isset( $roles[ $role ] ) ) {
@@ -16,7 +16,7 @@ function customize_roles( $roles ) {
         }
     }
 
-    // Change role name
+    // This changes the name of a role to correctly fit whatever you need it for
     $roles['subscriber']['name'] = 'Member';
 
     return $roles;
